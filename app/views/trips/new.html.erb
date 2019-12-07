@@ -1,8 +1,12 @@
 <h1>Add Trip</h1>
 <%= form_with(model: @trip, local: true) do |f| %>
+  <div class="ui divider"></div>
+  <div class="ui-grid">
   <div class="field">
-    <%= f.label :name %>
+    <%= f.label :"Name:" %>
     <%= f.text_field :name, required: true, placeholder: "Name" %>
   </div>
+  <br />
+
   <%= f.submit %>
 <% end %>
