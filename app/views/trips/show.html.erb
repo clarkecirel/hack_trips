@@ -1,2 +1,4 @@
-<h1>Trips#show</h1>
-<p>Find me in app/views/trips/show.html.erb</p>
+<h1><%= @trip.name %></h1>
+<h4>Name: <%= @trip.name %></h4>
+<br />
+<%= link_to 'Back To Trip', trip_path(@trip) %>
