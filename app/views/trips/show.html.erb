@@ -1,3 +1,4 @@
 <h1><%= @trip.name %></h1>
 <br />
-<%= link_to 'Back To Trip', trip_path(@trip) %>
+<%= link_to 'Locations', trip_locations_path(@trip, [:id]) %> |
+<%= link_to 'Back To Trip', :back %>

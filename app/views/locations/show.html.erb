@@ -1,9 +1,11 @@
 <h1><%= @location.name %></h1>
   <h4>Name: <%= @location.name %></h4>
   <br />
-  <%= link_to 'Edit Location', edit_location_path([ @location]) %> |
+  <%= link_to 'Edit Location', edit_location_path(@location) %> |
   <%= link_to 'Delete Location', [@trip, @location], method: :delete %> |
   <%= link_to 'Back To Locations', :back %>
+
+  
   
 
 

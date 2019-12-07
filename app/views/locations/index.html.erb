@@ -1,10 +1,14 @@
-<h1>Click an Location To View It</h1>
+<h1>Click a Location To View It</h1>
+<%= link_to 'New Location', new_trip_location_path %> |
+<%= link_to 'Back To Locations', :back %>
 <ul>
+<br />
 <% @locations.each do |location| %>
-  <li><%= link_to 'New Location', new_trip_location_path	 %></li>
     <li><%= link_to location.name, [@trip, location] %></li>
   <% end %>
+
 </ul>
+
 
 
 
