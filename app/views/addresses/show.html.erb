@@ -4,4 +4,5 @@
 <%= @address.zip %>
 <%= @address.state %>
 <%= link_to  "edit", edit_location_address_path(@location) %>
+<%= link_to  "Delete", [@address, @location], method: :delete %>
 <%= link_to 'Back', location_address_path(@location) %>
