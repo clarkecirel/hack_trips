@@ -14,7 +14,7 @@ class AddressesController < ApplicationController
   end
   
   def create
-    @address = @address.locations.new(address_params)
+    @address = @location.address.new(address_params)
     if @address.save
       redirect_to trip_location_path(@location.trip_id, @location)
     else
@@ -27,7 +27,6 @@ class AddressesController < ApplicationController
   end
   
   def update
-    binding.pry
     if @address.update(address_params)
       redirect_to location_addresses_path(@location)
     else
@@ -50,7 +49,7 @@ class AddressesController < ApplicationController
     end
 
     def address_params
-      params.require(:address).permit(:city, :state, :street, :zip)
+      params.require(:address).permit(:street, :city, :state, :zip)
     end  
 end
 

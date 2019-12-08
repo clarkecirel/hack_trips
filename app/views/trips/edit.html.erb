@@ -1,8 +1,11 @@
 <h1> Trip</h1>
 <%= form_with(model: @trip, local: true) do |f| %>
   <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name, required: true, placeholder: "Name" %>
+  <%= f.label :name %>
+  <%= f.text_field :name, required: true, placeholder: "Name" %>
   </div>
+  <br />
+  <div class="field">
   <%= f.submit %>
+  </div>
 <% end %>

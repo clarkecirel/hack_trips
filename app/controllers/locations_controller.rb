@@ -20,7 +20,7 @@ class LocationsController < ApplicationController
       @location = @trip.locations.new(location_params)
   
       if @location.save
-        redirect_to [@trip, @location]
+        redirect_to new_location_address_path(@location)
       else
         render :new
       end
